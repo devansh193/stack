@@ -6,7 +6,7 @@ const MarketingPage = () => {
   return (
     <div className="flex items-center justify-center flex-col">
       <div className="flex items-center justify-center flex-col">
-        <div className="mb-4 flex items-center border shadow-sm p-4 bg-zinc-100 text-zinc-700 rounded-full uppercase">
+        <div className="mb-4 flex items-center border shadow-lg p-4 bg-zinc-50 text-zinc-700 rounded-full uppercase">
           <Medal className="h-6 w-6 mr-3" />
           Manage your task efficiently.
         </div>
