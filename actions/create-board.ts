@@ -30,6 +30,7 @@ export async function create(previousState: State, formData: FormData) {
     };
   }
   const { title } = validatedFields.data;
+  
   try {
     await db.board.create({
       data: {
