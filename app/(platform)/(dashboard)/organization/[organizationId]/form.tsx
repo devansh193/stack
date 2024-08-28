@@ -12,7 +12,7 @@ export const Form = () => {
 
   return (
     <form action={dispatch}>
-      <FormInput/>
+      <FormInput errors={state.errors}/>
       <FormButton/>
     </form>
   );
