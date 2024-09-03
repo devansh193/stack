@@ -1,7 +1,7 @@
 const BoardIdPage = () =>{
     return(
         <div>
-            BoardId;
+            BoardId
         </div>
     );
 };
