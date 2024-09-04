@@ -1,6 +1,8 @@
 import { db } from "@/lib/db";
 import { auth } from "@clerk/nextjs/server";
 import { notFound, redirect } from "next/navigation";
+import { BoardNavbar } from "./[boardId]/_components/board-navbar";
+import { date } from "zod";
 
 const BoardIdLayout = async ({
   children,
@@ -27,9 +29,11 @@ const BoardIdLayout = async ({
 
   return (
     <div
-    className="relative h-full bg-no-repeat bg-cover bg-center"
+    className="min-h-screen w-full bg-no-repeat bg-cover bg-center"
     style={{backgroundImage: `url(${board.imageFullUrl})`}}>
-      <main className="relative pt-20 h-full">
+      <BoardNavbar data={board}/>
+      <div className="absolute inset-0 bg-black/10"/>
+      <main className="relative pt-28 h-full">
         {children}
       </main>
     </div>
