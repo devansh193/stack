@@ -9,21 +9,20 @@ import {
 import { deleteBoard } from "@/actions/delete-board";
 import { useAction } from "@/hooks/use-action";
 import { MoreHorizontal, X } from "lucide-react";
-import { error } from "console";
 import { toast } from "sonner";
 
 interface BoardOptionProps {
   id: string;
 }
 const BoardOptions = ({ id }: BoardOptionProps) => {
-    const { execute, isLoading } = useAction(deleteBoard,{
-        onError: (error)=>{
-            toast.error(error);
-        }
-    });
-    const onDelete = () =>{
-        execute({id});
-    }
+  const { execute, isLoading } = useAction(deleteBoard, {
+    onError: (error) => {
+      toast.error(error);
+    },
+  });
+  const onDelete = () => {
+    execute({ id });
+  };
   return (
     <Popover>
       <PopoverTrigger asChild>
