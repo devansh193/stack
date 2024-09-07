@@ -2,13 +2,13 @@
 
 import { FormInput } from "@/components/form/form-input";
 import { Button } from "@/components/ui/button";
-import { board } from "@prisma/client";
+import { Board } from "@prisma/client";
 import { ElementRef, useRef, useState } from "react";
 import { updateBoard } from "@/actions/update-board";
 import { useAction } from "@/hooks/use-action";
 import { toast } from "sonner";
 interface BoardTitleFormProps {
-  data: board;
+  data: Board;
 }
 export const BoardTitleForm = ({ data }: BoardTitleFormProps) => {
   const { execute } = useAction(updateBoard, {
