@@ -39,7 +39,7 @@ export const ListForm = () => {
       toast.error(error);
     },
   });
- 
+
   const onSubmit = (formData: FormData) => {
     const title = formData.get("title") as string;
     const boardId = formData.get("boardId") as string;
@@ -83,17 +83,17 @@ export const ListForm = () => {
         </form>
       </ListWrapper>
     );
+  } else {
+    return (
+      <ListWrapper>
+        <button
+          onClick={enableEditing}
+          className="w-full rounded-md bg-white/80 hover:bg-white/50 transition p-3 flex items-center font-medium text-sm"
+        >
+          <Plus className="h-4 w-4 mr-2" />
+          Add a list
+        </button>
+      </ListWrapper>
+    );
   }
-
-  return (
-    <ListWrapper>
-      <button
-        onClick={enableEditing}
-        className="w-full rounded-md bg-white/80 hover:bg-white/50 transition p-3 flex items-center font-medium text-sm"
-      >
-        <Plus className="h-4 w-4 mr-2" />
-        Add a list
-      </button>
-    </ListWrapper>
-  );
 };

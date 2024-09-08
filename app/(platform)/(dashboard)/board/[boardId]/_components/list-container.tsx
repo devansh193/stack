@@ -1,12 +1,12 @@
 "use client";
 
-import { List } from "@prisma/client";
 import { ListForm } from "./list-form";
 import { useEffect, useState } from "react";
 import { ListItem } from "./list-item";
+import { ListWithCards } from "@/types";
 
 interface ListContainerData {
-  data: List[];
+  data: ListWithCards[];
   boardId: string;
 }
 

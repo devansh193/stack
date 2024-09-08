@@ -34,13 +34,13 @@ const BoardIdPage = async ({ params }: BoardIdPageProps) => {
   });
 
 return (
-    <div className="p-4 h-full overflow-x-auto">
-        <ListContainer
-            boardId={params.boardId}
-            data={lists}
-        />
-        Board Id
-    </div>
+  <div className="p-4 h-full overflow-x-auto">
+    <ListContainer
+      boardId={params.boardId}
+      data={lists.map(list => ({ ...list, cards: list.card }))}
+    />
+    Board Id
+  </div>
 );
 };
 export default BoardIdPage;
